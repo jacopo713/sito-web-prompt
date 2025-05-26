@@ -1,0 +1,21 @@
+{
+  "id": "base",
+  "title": "Prompting Efficace e Metacognizione Iniziale",
+  "subtitle": "Le fondamenta per dialogare con l'IA",
+  "description": "Questo corso è il tuo punto di partenza per padroneggiare l'arte del prompt design e sviluppare una consapevolezza metacognitiva cruciale. Imparerai non solo a formulare prompt chiari ed efficaci, ma anche a capire 'come pensare' quando interagisci con qualsiasi modello di Intelligenza Artificiale, ottimizzando il tuo lavoro e la tua creatività. Copre tutti gli aspetti fondamentali, dalle basi del prompt design alle tecniche di raffinamento, gestione dell'attenzione e sviluppo della curiosità epistemica.",
+  "targetAudience": [
+    "Principianti assoluti che vogliono capire come usare al meglio le IA.",
+    "Studenti e professionisti che desiderano integrare l'IA nel loro flusso di lavoro.",
+    "Creativi, marketer, sviluppatori che cercano di ottenere output di qualità superiore dalle IA.",
+    "Chiunque sia curioso di sbloccare il potenziale del dialogo uomo-macchina."
+  ],
+  "learningObjectives": [
+    "Comprendere i principi fondamentali del prompt design: struttura, chiarezza, contesto.",
+    "Introdurre e applicare concetti base di metacognizione per osservare e valutare i propri prompt.",
+    "Sviluppare un pensiero critico di base per riconoscere errori e output inadeguati dall'IA.",
+    "Apprendere tecniche di raffinamento per migliorare i prompt passo-passo.",
+    "Imparare a gestire l'attenzione per un uso dell'IA focalizzato e senza distrazioni.",
+    "Stimolare la curiosità epistemica per formulare le domande giuste all'IA.",
+    "Applicare abilità logico-analitiche iniziali per capire perché un prompt funziona (o non funziona)."
+  ]
+}

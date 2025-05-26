@@ -1,0 +1,28 @@
+{
+  "moduleSlug": "modulo-1",
+  "moduleTitle": "Modulo 1: Le Basi del Prompt Design e Consapevolezza Metacognitiva",
+  "description": "In questo modulo introduttivo, getteremo le fondamenta per comprendere come funzionano i prompt e come iniziare a riflettere sul nostro modo di interagire con l'IA.",
+  "icon": "FiZap",
+  "lessons": [
+    {
+      "slug": "lezione-1",
+      "title": "Cos'è un Prompt e Perché è Cruciale?",
+      "duration": "10 min"
+    },
+    {
+      "slug": "lezione-2", 
+      "title": "Struttura del Prompt Efficace e Strategie Chiave",
+      "duration": "15 min"
+    },
+    {
+      "slug": "lezione-3",
+      "title": "Introduzione alla Metacognizione nel Prompting",
+      "duration": "12 min"
+    },
+    {
+      "slug": "lezione-4",
+      "title": "Pensiero Critico: Valutare le Risposte AI",
+      "duration": "18 min"
+    }
+  ]
+}

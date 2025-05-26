@@ -1,9 +1,16 @@
-import { FiCpu, FiMessageSquare, FiRepeat, FiZap, FiArrowRight, FiTrendingUp, FiCheckCircle, FiInfo, FiArrowLeft } from 'react-icons/fi';
-import { FaBrain } from 'react-icons/fa';
-import Link from 'next/link';
+import Link from 'next/link'
+import { FiCpu, FiMessageSquare, FiRepeat, FiZap, FiArrowRight, FiTrendingUp, FiCheckCircle, FiInfo, FiArrowLeft } from 'react-icons/fi'
+import { FaBrain } from 'react-icons/fa'
+import MarkdownRenderer from '@/components/content/MarkdownRenderer'
+import { getLessonContent, getModuleInfo } from '@/lib/content-reader'
+import { notFound } from 'next/navigation'
 
-// Componente semplice per un blocco "Callout/InfoBox"
-const InfoBox = ({ icon: Icon, title, children }: { icon: React.ElementType, title?: string, children: React.ReactNode }) => (
+// InfoBox component for special callouts
+const InfoBox = ({ icon: Icon, title, children }: { 
+  icon: React.ElementType
+  title?: string
+  children: React.ReactNode 
+}) => (
   <div className="bg-indigo-50 dark:bg-indigo-900/30 border-l-4 border-indigo-500 dark:border-indigo-400 rounded-r-lg p-4 sm:p-6 my-6 shadow-md">
     <div className="flex items-start space-x-3">
       <Icon className="h-6 w-6 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
@@ -15,22 +22,32 @@ const InfoBox = ({ icon: Icon, title, children }: { icon: React.ElementType, tit
       </div>
     </div>
   </div>
-);
+)
 
-export default function Lezione1Page() {
-  const lessonTitle = "Cos'è un Prompt e Perché è Cruciale?";
-  const moduleSlug = "modulo-1";
-  const nextLessonSlug = `/corsi/base/${moduleSlug}/lezione-2`;
-  // For the very first lesson, there's no previous lesson.
-  const previousLessonSlug = null;
+export default async function Lezione1Page() {
+  const courseId = 'base'
+  const moduleSlug = 'modulo-1'
+  const lessonSlug = 'lezione-1'
+  
+  // Load lesson content and module info
+  const lessonContent = await getLessonContent(courseId, moduleSlug, lessonSlug)
+  const moduleInfo = await getModuleInfo(courseId, moduleSlug)
+  
+  if (!lessonContent || !moduleInfo) {
+    notFound()
+  }
 
+  const nextLessonSlug = `/corsi/base/${moduleSlug}/lezione-2`
+  const previousLessonSlug = null // First lesson has no previous
 
   return (
     <article className="bg-white dark:bg-slate-800 shadow-xl rounded-xl p-6 sm:p-8 lg:p-10">
       <header className="mb-8 sm:mb-10 pb-6 border-b border-slate-200 dark:border-slate-700">
-        <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide mb-1">Modulo 1 - Lezione 1</p>
+        <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide mb-1">
+          Modulo 1 - Lezione 1
+        </p>
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100">
-          {lessonTitle}
+          {lessonContent.title}
         </h1>
       </header>
 
@@ -51,6 +68,7 @@ export default function Lezione1Page() {
         <p>
           Probabilmente interagite già con Chatbot basati su Intelligenza Artificiale (IA) come <strong>ChatGPT</strong>, <strong>Claude</strong>, <strong>Gemini</strong> o <strong>DeepSeek</strong>. Ma cosa sono esattamente? In breve, si tratta di sofisticati programmi informatici, costruiti su <strong>Grandi Modelli Linguistici (LLM - Large Language Models)</strong>.
         </p>
+        
         <InfoBox icon={FiInfo} title="Come funzionano gli LLM?">
           <p>Questi modelli sono stati addestrati analizzando enormi quantità di testo e dati. Grazie a questo addestramento, sono in grado di:</p>
           <ul className="list-disc list-outside space-y-1 pl-5">
@@ -61,6 +79,7 @@ export default function Lezione1Page() {
             <li>Mantenere una conversazione naturale.</li>
           </ul>
         </InfoBox>
+        
         <p>
            Il &quot;motore&quot; che guida queste potenti IA a fornirci i risultati desiderati è il <strong>prompt</strong>: l&apos;istruzione, la domanda o l&apos;input che noi forniamo loro. Ed è qui che entra in gioco il Prompt Design.
         </p>
@@ -80,6 +99,7 @@ export default function Lezione1Page() {
         <p>
           Immaginiamo l&apos;Intelligenza Artificiale come un <strong>assistente incredibilmente capace</strong>, pronto ad aiutarci a estendere le nostre capacità cognitive, creative e operative. Che si tratti di scrivere codice, generare idee, analizzare dati o creare contenuti, l&apos;IA può agire come un <strong>amplificatore del nostro potenziale</strong>.
         </p>
+        
         <InfoBox icon={FiZap} title="L'Effetto Moltiplicativo dei Buoni Prompt">
            <p>L&apos;efficacia di questa &quot;estensione&quot; dipende crucialmente dalla qualità della nostra comunicazione. Man mano che gli strumenti IA diventano più potenti, la nostra capacità di guidarli è ancora più determinante.</p>
            <p>Fornire <strong>prompt ben strutturati</strong>, che considerino diversi aspetti e forniscano contesto, non produce un miglioramento lineare, ma spesso un <strong>effetto moltiplicativo sui risultati</strong>: la qualità, profondità e utilità dell&apos;output possono aumentare esponenzialmente.</p>
@@ -97,6 +117,7 @@ export default function Lezione1Page() {
            <li><strong>Monitorare criticamente</strong> le risposte dell&apos;IA: soddisfano le aspettative? Dove sono le lacune? Come ha interpretato l&apos;IA il nostro input?</li>
            <li><strong>Regolare e adattare</strong> il nostro approccio: come possiamo modificare il prompt (e quindi il nostro modo di strutturare la richiesta nel pensiero) per ottenere un risultato migliore?</li>
         </ol>
+        
         <InfoBox icon={FiRepeat} title="Un Sistema Crescente di Potenzialità">
            <p>Questo processo crea un <strong>ciclo virtuoso</strong>: migliorando i prompt attraverso la riflessione, non solo otteniamo output migliori, ma affiniamo anche la nostra capacità di pensare in modo strutturato e di comunicare chiaramente.</p>
            <p>Comprendere come &quot;ragiona&quot; l&apos;IA ci permette di creare prompt ancora più efficaci, innescando una crescita continua.</p>
@@ -151,5 +172,5 @@ export default function Lezione1Page() {
 
       </div>
     </article>
-  );
+  )
 }
