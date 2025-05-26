@@ -1,0 +1,23 @@
+{
+  "moduleSlug": "modulo-3",
+  "moduleTitle": "Modulo 3: Mindset e Abilità Efficaci con l'IA",
+  "description": "Sviluppo di abilità trasversali: gestione dell'attenzione, stimolo della curiosità epistemica e potenziamento delle capacità logico-analitiche per interazioni avanzate.",
+  "icon": "FiAward",
+  "lessons": [
+    {
+      "slug": "lezione-1-m3",
+      "title": "Gestione dell'Attenzione e Focus con l'IA",
+      "duration": "15 min"
+    },
+    {
+      "slug": "lezione-2-m3", 
+      "title": "Curiosità Epistemica e Domande Esplorative",
+      "duration": "18 min"
+    },
+    {
+      "slug": "lezione-3-m3",
+      "title": "Analisi Logica e Comprensione degli Output",
+      "duration": "22 min"
+    }
+  ]
+}

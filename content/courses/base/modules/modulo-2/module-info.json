@@ -1,0 +1,23 @@
+{
+  "moduleSlug": "modulo-2",
+  "moduleTitle": "Modulo 2: Tecniche di Prompting e Raffinamento",
+  "description": "Esplorazione di strategie di prompting analitiche e creative, come fornire contesto efficace e le tecniche per iterare e migliorare i tuoi prompt.",
+  "icon": "FiLayers",
+  "lessons": [
+    {
+      "slug": "lezione-1-m2",
+      "title": "Prompt Creativi vs. Analitici: Adattare la Strategia",
+      "duration": "15 min"
+    },
+    {
+      "slug": "lezione-2-m2",
+      "title": "Fornire Contesto Efficace: Guida l'IA",
+      "duration": "18 min"
+    },
+    {
+      "slug": "lezione-3-m2",
+      "title": "Tecniche di Raffinamento Iterativo",
+      "duration": "20 min"
+    }
+  ]
+}
